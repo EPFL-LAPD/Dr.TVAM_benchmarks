@@ -7,25 +7,20 @@
 
 ## Test Subjects
 
-* **Dr. TVAM**: Tested on **RTX306012GB** and **L40S40GB**.
+* **Dr. TVAM**: Tested on **RTX3060 12GB** and **L40S 40GB**.
 * **Benchy**:
   * Size: **10mm**
   * Pixel size: **25µm**
   * Resolution on DMD: **400x400 pixels**
   * Angles: **400**
+  * 40 iterations with gradient based L-BFGS optimizer
 
-## Rendering Performance
-
-### Rendering Configurations
-
-The following configurations were tested on the RTX 3060:
-* **Julia-based index-matched**
-* **Julia-based cylindrical**
-
-### Performance Results
+## Computation Performance
 
 | Configuration | Rays per Pixel | Rendering Time (RTX3060) | Rendering Time (L40S) |
 | --- | --- | --- | --- |
+| Julia Radon based |1 | **197s** |  |
+| index-matched |1 | **122s** | **20s** |
 | index-matched |1 | **122s** | **20s** |
 | cylindrical |1 | **130s** | **23s** |
 | square |1 | **135s** | **20s** |
