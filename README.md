@@ -20,10 +20,10 @@
 | Configuration | Rays per Pixel | Rendering Time (RTX3060) | Rendering Time (L40S) |
 | --- | --- | --- | --- |
 | Julia Radon based | 1 | **0h 3m 17s** |  |
-| index-matched | 1 | **0h 2m 2s** | **0h 0m 20s** |
-| index-matched | 1 | **0h 2m 2s** | **0h 0m 20s** |
-| cylindrical | 1 | **0h 2m 10s** | **0h 0m 23s** |
-| square | 1 | **0h 2m 15s** | **0h 0m 20s** |
-| cylindrical scattering | 16 | **1h 40m 0s** | **0h 14m 10s** |
-| square scattering | 16 | **1h 40m 0s** | **0h 14m 20s** |
-| square scattering (surface-aware loss, disable black pixels) | 16 | **0h 25m 0s** | **0h 3m 45s** |
+| Dr. TVAM index-matched | 1 | **0h 2m 2s** | **0h 0m 20s** |
+| Dr. TVAM index-matched | 1 | **0h 2m 2s** | **0h 0m 20s** |
+| Dr. TVAM cylindrical | 1 | **0h 2m 10s** | **0h 0m 23s** |
+| Dr. TVAM square | 1 | **0h 2m 15s** | **0h 0m 20s** |
+| Dr. TVAM cylindrical scattering | 16 | **1h 40m 0s** | **0h 14m 10s** |
+| Dr. TVAM square scattering | 16 | **1h 40m 0s** | **0h 14m 20s** |
+| Dr. TVAM square scattering (surface-aware loss, disable black pixels) | 16 | **0h 25m 0s** | **0h 3m 45s** |
