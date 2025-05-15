@@ -2,13 +2,13 @@
 
 ## Hardware Specifications
 
-* **RTX306012GB (2020)**: Entry-level consumer hardware GPU, priced around **~300USD**.
-* **L40S (2022)**: Professional graphics card used primarily in server clusters, priced around **5000USD**.
+* **RTX3060 12GB (2020)**: Entry-level consumer hardware GPU, priced around **~300USD**.
+* **L40S 48GB (2022)**: Professional graphics card used primarily in server clusters, priced around **5000USD**.
 
 ## Test Subjects
 
 * **Dr. TVAM**: Tested on **RTX3060 12GB** and **L40S 40GB**.
-* **Benchy**:
+* **Benchy** boat as target:
   * Size: **10mm**
   * Pixel size: **25µm**
   * Resolution on DMD: **400x400 pixels**
