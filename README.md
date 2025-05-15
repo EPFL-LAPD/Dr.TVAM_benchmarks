@@ -17,7 +17,7 @@
 
 ### Computation Performance
 
-| Configuration | Rays per Pixel | Rendering Time (RTX3060) | Rendering Time (L40S) |
+| Configuration | Rays per Pixel |  Time (RTX3060) |  Time (L40S) |
 | --- | --- | --- | --- |
 | Julia Radon based | 1 | **0h 3m 17s** |  |
 | Dr. TVAM index-matched | 1 | **0h 2m 2s** | **0h 0m 20s** |
