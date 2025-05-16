@@ -15,6 +15,7 @@
   * Angles: **400**
   * 40 iterations with gradient-based L-BFGS optimizer
 
+* The Julia based (attenuated) Radon transform is using the same parameters and optimizer.
 ### Computation Performance
 
 | Configuration | Rays per Pixel |  Time (RTX3060) |  Time (L40S) |
