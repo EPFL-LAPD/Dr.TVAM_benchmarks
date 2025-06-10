@@ -142,9 +142,10 @@ def optimize(config):
         # Deactivate pixels where the Radon transform is zero
         radon_integrator = mi.load_dict({
             'type': 'radon',
-            'max_depth': 5,
+            'max_depth': 25,
+            "rr_depth": 25,
         })
-        radon = mi.render(scene, integrator=radon_integrator, spp=config.get('spp_filter_radon', 4))
+        radon = mi.render(scene, integrator=radon_integrator, spp=config.get('spp_filter_radon', 32))
 
         print(radon.shape)
         print(dr.sum(radon.array))
@@ -325,18 +326,19 @@ def optimize(config):
     # Deactivate pixels where the Radon transform is zero
     radon_integrator = mi.load_dict({
         'type': 'radon',
-        'max_depth': 5,
+        'max_depth': 32,
+        'rr_depth': 32,
     })
-    radon = mi.render(scene2, integrator=radon_integrator, spp=config.get('spp_filter_radon', 1))
+    radon = mi.render(scene2, integrator=radon_integrator, spp=config.get('spp_filter_radon', 32))
 
-    filtered = radon.array#filtered_backprojection(radon.numpy())
+    filtered = filtered_backprojection(radon.numpy())
 
     from drjit.cuda.ad import Array3f, TensorXf
 
 
     print(TensorXf(filtered))
     print("Filtered Radon shape:", TensorXf(filtered).shape)
-    params["projector.active_data"] = radon.array#TensorXf(filtered)
+    params["projector.active_data"] = 500_000 * TensorXf(np.maximum(0 * filtered,filtered))
     params.update()
 
     print("Rendering final state...")
@@ -449,23 +451,22 @@ def main():
 def filtered_backprojection(data):
     # Input shape: (40, 400, 400)
     # Apply FFT over last 2 dimensions
-    fft_data = np.fft.fft2(data, axes=(-2, -1))
+    fft_data = np.fft.fftn(data, axes=(-1,))
 
     # Create ramp filter for 400x400
     h, w = data.shape[-2:]
 
     # Create frequency coordinates
-    freq_y = np.fft.fftfreq(h).reshape(-1, 1)
-    freq_x = np.fft.fftfreq(w).reshape(1, -1)
+    freq_x = np.fft.fftfreq(w).reshape(1,1, -1)
 
     # Ramp filter: |frequency|
-    ramp_filter = np.sqrt(freq_x**2 + freq_y**2)
+    ramp_filter = np.sqrt(freq_x**2)
 
     # Apply filter (broadcast over first dimension)
     filtered_fft = fft_data * ramp_filter
 
     # Inverse FFT back to spatial domain
-    result = np.fft.ifft2(filtered_fft, axes=(-2, -1)).real
+    result = np.real(np.fft.ifftn(filtered_fft, axes=(-1,)))
 
     return result
 

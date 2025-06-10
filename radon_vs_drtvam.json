@@ -1,18 +1,18 @@
 {
     "vial": {
         "type": "index_matched",
-        "r": 10.191,
+        "r": 6,
         "ior": 1.54,
         "medium": {
             "ior": 1.54,
             "phase": {"type": "rayleigh"},
-            "extinction": 0.001,
+            "extinction": 0.1,
             "albedo": 0.0
         }
     },
     "projector": {
         "type": "collimated",
-        "n_patterns": 40,
+        "n_patterns": 400,
         "resx": 400,
         "resy": 400,
         "pixel_size": 25e-3,
@@ -21,18 +21,18 @@
     },
     "sensor": {
         "type": "dda",
-        "scalex": 8.5,
-        "scaley": 8.5,
-                "scalez": 8.5,
+        "scalex": 8.75,
+        "scaley": 8.75,
+                "scalez": 8.75,
         "film": {
             "type": "vfilm",
-            "resx": 56,
-            "resy": 56,
-            "resz": 56
+            "resx": 350,
+            "resy": 350,
+            "resz": 350
         }
     },
     "target": {
-        "filename": "benchy.ply",
+        "filename": "benchy2.ply",
         "size": 8.0
     },
     "loss": {
@@ -40,10 +40,10 @@
         "tl": 0.7,
         "tu": 0.95
     },
-    "spp_ref": 1,
+    "spp_ref": 8,
     "filter_radon": false,
-    "spp": 1,
-    "spp_grad": 1,
+    "spp": 8,
+    "spp_grad": 8,
     "transmission_only": true,
-    "n_steps": 3
+    "n_steps": 40
 }
