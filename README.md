@@ -1,4 +1,18 @@
-## Benchmarks of Dr. TVAM
+# Benchmarks of Dr. TVAM
+
+## Comparison of filtered backprojection vs Dr.TVAM
+
+
+# Reconstruction Results Comparison
+
+| Method | Dr. TVAM | Positive Filtered Backprojection |
+|--------|----------|----------------------------------|
+| **Intensity** | <img src="drtvam_intensity.png" width="400"> | <img src="clipped_filtered_backprojection_intensity.png" width="400"> |
+| **Best Thresholded Intensity** | <img src="drtvam.png" width="400"> | <img src="clipped_filtered_backprojection.png" width="400"> |
+| **Histogram** | <img src="histogram_drtvam.png" width="400"> | <img src="histogram_clipped_filtered_backprojection.png" width="400"> |
+
+
+
 
 ### Hardware Specifications
 
