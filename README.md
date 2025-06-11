@@ -2,8 +2,7 @@
 
 ## Comparison of filtered backprojection vs Dr.TVAM
 
-
-# Reconstruction Results Comparison
+### Reconstruction Results Comparison
 
 | Method | Dr. TVAM | Positive Filtered Backprojection |
 |--------|----------|----------------------------------|
@@ -12,6 +11,8 @@
 | **Histogram** | <img src="histogram_drtvam.png" width="400"> | <img src="histogram_clipped_filtered_backprojection.png" width="400"> |
 
 
+
+## Speed Benchmarks
 
 
 ### Hardware Specifications
