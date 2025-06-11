@@ -38,7 +38,8 @@
     "loss": {
         "type": "threshold",
         "tl": 0.7,
-        "tu": 0.95
+        "tu": 0.95,
+        "weight_sparsity": 10.00
     },
     "spp_ref": 8,
     "filter_radon": false,
