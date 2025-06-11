@@ -2,8 +2,10 @@
 
 ## Comparison of filtered backprojection vs Dr.TVAM
 
+### Reconstruction Results Comparison
 
-# Reconstruction Results Comparison
+All physical parameters are specified in [this config file](https://github.com/EPFL-LAPD/Dr.TVAM_benchmarks/blob/main/radon_vs_drtvam.json). Most notable, the attenuation coefficient is $\mu = 0.1 \frac{1}{\mathrm{mm}}$.
+The Radon transform assumes a $\mu \ll 1$, so in this case this requirement is violated (as in most realistic printing scenarios).
 
 | Method | Dr. TVAM | Positive Filtered Backprojection |
 |--------|----------|----------------------------------|
@@ -12,6 +14,8 @@
 | **Histogram** | <img src="histogram_drtvam.png" width="400"> | <img src="histogram_clipped_filtered_backprojection.png" width="400"> |
 
 
+
+## Speed Benchmarks
 
 
 ### Hardware Specifications
