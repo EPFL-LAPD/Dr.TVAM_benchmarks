@@ -11,6 +11,7 @@ The Radon transform assumes a $\mu \ll 1$, so in this case this requirement is v
 |--------|----------|----------------------------------|
 | **Intensity** | <img src="drtvam_intensity.png" width="400"> | <img src="clipped_filtered_backprojection_intensity.png" width="400"> |
 | **Best Thresholded Intensity** | <img src="drtvam.png" width="400"> | <img src="clipped_filtered_backprojection.png" width="400"> |
+| **Pattern for one angle** | <img src="pattern_drtvam.png" width="400"> | <img src="pattern_radon.png" width="400"> |
 | **Histogram** | <img src="histogram_drtvam.png" width="400"> | <img src="histogram_clipped_filtered_backprojection.png" width="400"> |
 
 
