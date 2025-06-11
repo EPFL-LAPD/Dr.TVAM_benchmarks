@@ -11,6 +11,8 @@ The Radon transform assumes a $\mu \ll 1$, so in this case this requirement is v
 Note, Dr.TVAM allows to control the sparsity of the patterns (over `weight_sparsity` in the [config file](https://github.com/EPFL-LAPD/Dr.TVAM_benchmarks/blob/main/radon_vs_drtvam.json)). So even higher energy efficiencies can be achieved, if desired.
 
 
+
+a), b), c), d) show different slices along the vertical axis of the final intensity and thresholded intensity.
 | Method | Dr. TVAM | Positive Filtered Backprojection |
 |--------|----------|----------------------------------|
 | **Intensity** | <img src="drtvam_intensity.png" width="400"> | <img src="clipped_filtered_backprojection_intensity.png" width="400"> |
