@@ -1,5 +1,7 @@
 # Benchmarks of Dr. TVAM
 
+Here we show some simple benchmarks of [Dr.TVAM](https://github.com/rgl-epfl/drtvam).
+
 ## Comparison of filtered backprojection vs Dr.TVAM
 
 ### Reconstruction Results Comparison
