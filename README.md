@@ -12,6 +12,8 @@ Note, Dr.TVAM allows to control the sparsity of the patterns (over `weight_spars
 
 
 
+<img src="slice_boat.png" width="500"> 
+
 a), b), c), d) show different slices along the vertical axis of the final intensity and thresholded intensity.
 | Method | Dr. TVAM | Positive Filtered Backprojection |
 |--------|----------|----------------------------------|
