@@ -10,8 +10,6 @@ All physical parameters are specified in [this config file](https://github.com/E
 The Radon transform assumes a $\mu \ll 1$, so in this case this requirement is violated (as in most realistic printing scenarios).
 Note, Dr.TVAM allows to control the sparsity of the patterns (over `weight_sparsity` in the [config file](https://github.com/EPFL-LAPD/Dr.TVAM_benchmarks/blob/main/radon_vs_drtvam.json)). So even higher energy efficiencies can be achieved, if desired.
 
-
-
 <img src="slice_boat.png" width="500"> 
 
 a), b), c), d) show different slices along the vertical axis of the final intensity and thresholded intensity.
